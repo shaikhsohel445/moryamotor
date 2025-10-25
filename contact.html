@@ -82,7 +82,7 @@
         <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
             <div class="text-center">
                 <h2 class="m-0"><i class="fa fa-car text-primary me-2"></i>MMDS</h2>
-                <p class="text-dark small m-0" style="font-size: 12px;">(Morya Motor Driving School)</p>
+                <p class="text-dark small m-0" style="font-size: 12px;">(मोरया मोटर ड्रायव्हिंग स्कूल)</p>
             </div>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -132,24 +132,37 @@
     <div class="container-xxl py-6">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 450px;">
-                    <div class="position-relative h-100">
-                        <iframe class="position-relative w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.433804871955!2d76.77326007521005!3d19.263492381980157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd0195efded65a3%3A0xd061fc13c39fb9e3!2sMorya%20Motor%20Driving%20School!5e0!3m2!1sen!2sin!4v1761378247060!5m2!1sen!2sin"
-                            frameborder="0"
-                            style="min-height: 450px; border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            aria-hidden="false"
-                            tabindex="0">
-                        </iframe>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 450px; position: relative;">
+                    <!-- Google Map for RR Petrol Pump -->
+                    <iframe class="position-relative w-100 h-100 rounded"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.433804871955!2d76.77326007521005!3d19.263492381980157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd0195efded65a3%3A0xd061fc13c39fb9e3!2sRR%20Petrol%20Pump!5e0!3m2!1sen!2sin!4v1761378247060!5m2!1sen!2sin"
+                        frameborder="0"
+                        style="min-height: 450px; border:0; filter: brightness(0.9);"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        aria-hidden="false"
+                        tabindex="0">
+                    </iframe>
+                
+                    <!-- Overlay Morya Motor Symbol -->
+                    <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
+                        <img src="https://encrypted-tbn2.gstatic.com/faviconV2?url=https://moryamotordrivingschoolparbhani.in&client=VFE&size=64&type=FAVICON&fallback_opts=TYPE,SIZE,URL&nfrp=2" alt="Morya Motor Logo" style="display:block; margin: 0 auto 5px;">
+                        <span style="font-weight: bold; font-size: 14px; color: #333;">Morya Motor</span>
                     </div>
-                    
                 </div>
+                
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <h6 class="text-primary text-uppercase mb-2">संपर्क करा | Contact Us</h6>
-                    <h1 class="display-6 mb-4">काही शंका असल्यास आमच्याशी संपर्क साधा<br>If You Have Any Query, Please Contact Us</h1>
+                    <h1 class="display-6 mb-4">
+                        अधिक माहितीसाठी<br>
+                        For More Information
+                    </h1>
+                    
+                    <p class="mb-2">
+                        Near RR Petrol Pump, Basmat Road, Ramkrishna Nagar-431401
+                    </p>
+                    
                     <p class="mb-4">
                         आमच्याशी थेट WhatsApp वर संपर्क साधण्यासाठी खालील फॉर्म भरा 👇<br>
                         Fill the form below to send your query directly on WhatsApp 📲
@@ -162,13 +175,6 @@
                                     <input type="text" class="form-control border-0 bg-light" id="name"
                                         placeholder="आपले नाव / Your Name" required>
                                     <label for="name">आपले नाव / Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control border-0 bg-light" id="email"
-                                        placeholder="ईमेल / Your Email">
-                                    <label for="email">ईमेल / Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -193,6 +199,7 @@
                         </div>
                     </form>
                 </div>
+                
                 
                 <!-- WhatsApp Send Script -->
                 <script>
@@ -231,9 +238,9 @@
                     </h2>
                     <p class="mb-2">
                         <i class="fa fa-map-marker-alt me-3"></i>
-                        स्टेडियम रोड, जुन RTO रोड, BSNL ऑफिस समोर, परभणी <br>
-                        <span class="text-light">(Stadium Road, Near BSNL Office, Old RTO Road, Parbhani)</span>
-                    </p>
+                        स्टोअर नंबर 3, RR पेट्रोल पंप जवळ, भालेराव कॉम्प्लेक्स, रामकृष्ण नगर, बसमत रोड - 431401<br>
+                        <!-- <span class="text-light">Shop Number 3, Near RR Petrol Pump, Bhalerao Complex, Ramkrishna Nagar, Basmat Road - 431401</span> -->
+                    </p>                    
                     <p class="mb-2">
                         <i class="fa fa-phone-alt me-3"></i>
                         +91 7385839375

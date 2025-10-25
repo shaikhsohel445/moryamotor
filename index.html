@@ -91,7 +91,7 @@
         <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
             <div class="text-center">
                 <h2 class="m-0"><i class="fa fa-car text-primary me-2"></i>MMDS</h2>
-                <p class="text-dark small m-0" style="font-size: 12px;">(Morya Motor Driving School)</p>
+                <p class="text-dark small m-0" style="font-size: 12px;">(मोरया मोटर ड्रायव्हिंग स्कूल)</p>
             </div>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -102,6 +102,7 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                 <a href="courses.html" class="nav-item nav-link">Courses</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -351,51 +352,80 @@
                 </div>
                 <div class="col-lg-8 my-6 mb-0 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="bg-primary text-center p-5">
-                        <h1 class="mb-4">Make Appointment</h1>
-                        <form>
+                        <h1 class="mb-4">अपॉइंटमेंट बुक करा / Make Appointment</h1>
+                        <form id="whatsappAppointmentForm">
                             <div class="row g-3">
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="gname"
-                                            placeholder="Gurdian Name">
-                                        <label for="gname">Your Name</label>
+                                        <input type="text" class="form-control border-0" id="name"
+                                            placeholder="आपले नाव / Your Name" required>
+                                        <label for="name">आपले नाव / Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="gmail"
-                                            placeholder="Gurdian Email">
-                                        <label for="gmail">Your Email</label>
+                                        <input type="text" class="form-control border-0" id="course"
+                                            placeholder="कोर्स प्रकार / Course Type" required>
+                                        <label for="course">कोर्स प्रकार / Course Type</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="cname"
-                                            placeholder="Child Name">
-                                        <label for="cname">Courses Type</label>
+                                        <input type="text" class="form-control border-0" id="vehicle"
+                                            placeholder="वाहन प्रकार / Vehicle Type" required>
+                                        <label for="vehicle">वाहन प्रकार / Vehicle Type</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="cage"
-                                            placeholder="Child Age">
-                                        <label for="cage">Car Type</label>
+                                        <input type="text" class="form-control border-0" id="district"
+                                            placeholder="जिल्हा / District" required>
+                                        <label for="district">जिल्हा / District</label>
+                                    </div>
+                                </div>                                
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0" placeholder="आपला संदेश लिहा / Leave a Message Here"
+                                            id="message" style="height: 100px" required></textarea>
+                                        <label for="message">संदेश / Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control border-0" placeholder="Leave a message here"
-                                            id="message" style="height: 100px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Submit</button>
+                                    <button class="btn btn-dark w-100 py-3" type="submit">सबमिट करा / Submit</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
+                
+                <script>
+                document.getElementById("whatsappAppointmentForm").addEventListener("submit", function(e) {
+                    e.preventDefault(); // Form submit रोकें
+                
+                    // WhatsApp नंबर यहाँ डालें (जैसे भारत के लिए +91XXXXXXXXXX)
+                    var phoneNumber = "917385839375";
+                
+                    // फॉर्म की जानकारी ले लें
+                    var name = document.getElementById("name").value;
+                    var course = document.getElementById("course").value;
+                    var vehicle = document.getElementById("vehicle").value;
+                    var message = document.getElementById("message").value;
+                
+                    // WhatsApp message format
+                    var text = "नमस्ते! मुझे अपॉइंटमेंट चाहिए।\n\n" +
+                               "आपले नाव / Name: " + name + "\n" +
+                               "कोर्स प्रकार / Course Type: " + course + "\n" +
+                               "वाहन प्रकार / Vehicle Type: " + vehicle + "\n" +
+                               "संदेश / Message: " + message;
+                
+                    // WhatsApp URL
+                    var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(text);
+                
+                    // WhatsApp खोलें
+                    window.open(url, "_blank");
+                });
+                </script>
+                
             </div>
         </div>
     </div>
@@ -406,11 +436,13 @@
     <div class="container-xxl py-6">
         <div class="container">
             <div class="row g-5">
+                <!-- Left Content -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-primary text-uppercase mb-2">Why Choose Us!</h6>
-                    <h1 class="display-6 mb-4">Best Driving Training Agency In Your City</h1>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                    <h6 class="text-primary text-uppercase mb-2">Morya Motor Driving School</h6>
+                    <h1 class="display-6 mb-4">Best Driving Training Academy in Your City</h1>
+                    <p class="mb-5">
+                        Morya Motor Driving School provides professional driving training with certified instructors. 
+                        Learn safe driving techniques, traffic rules, and get real-time practice with our experienced trainers.
                     </p>
                     <div class="row gy-5 gx-4">
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
@@ -418,39 +450,40 @@
                                 <div class="flex-shrink-0 btn-square bg-primary me-3">
                                     <i class="fa fa-check text-white"></i>
                                 </div>
-                                <h5 class="mb-0">Fully Licensed</h5>
+                                <h5 class="mb-0">Certified Instructors</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>Learn from experienced and fully licensed driving instructors.</span>
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="flex-shrink-0 btn-square bg-primary me-3">
                                     <i class="fa fa-check text-white"></i>
                                 </div>
-                                <h5 class="mb-0">Online Tracking</h5>
+                                <h5 class="mb-0">Practical Training</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>Hands-on driving practice in real traffic conditions for all learners.</span>
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="flex-shrink-0 btn-square bg-primary me-3">
                                     <i class="fa fa-check text-white"></i>
                                 </div>
-                                <h5 class="mb-0">Afordable Fee</h5>
+                                <h5 class="mb-0">Affordable Fees</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>Quality training at competitive and transparent prices.</span>
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="flex-shrink-0 btn-square bg-primary me-3">
                                     <i class="fa fa-check text-white"></i>
                                 </div>
-                                <h5 class="mb-0">Best Trainers</h5>
+                                <h5 class="mb-0">Flexible Schedule</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>Choose training timings that fit your convenience.</span>
                         </div>
                     </div>
                 </div>
+                <!-- Right Images -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="position-relative overflow-hidden pe-5 pt-5 h-100" style="min-height: 400px;">
                         <img class="position-absolute w-100 h-100" src="img/about-1.jpg" alt=""
@@ -462,6 +495,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Features End -->
 
 
@@ -628,7 +662,7 @@
                     <p class="text-light small mb-3" style="font-size: 12px;">(Morya Motor Driving School)</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Dnyaneshwar Nagar, Near Mauli Nagar Pati, Parbhani</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>7385839375, 7709110900</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"></i>moryamotordrivingschool@gmail.com</p>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
