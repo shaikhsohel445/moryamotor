@@ -136,38 +136,35 @@
                     <!-- Google Map for RR Petrol Pump -->
                     <iframe class="position-relative w-100 h-100 rounded"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.433804871955!2d76.77326007521005!3d19.263492381980157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd0195efded65a3%3A0xd061fc13c39fb9e3!2sRR%20Petrol%20Pump!5e0!3m2!1sen!2sin!4v1761378247060!5m2!1sen!2sin"
-                        frameborder="0"
-                        style="min-height: 450px; border:0; filter: brightness(0.9);"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        aria-hidden="false"
-                        tabindex="0">
+                        frameborder="0" style="min-height: 450px; border:0; filter: brightness(0.9);" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-hidden="false" tabindex="0">
                     </iframe>
-                
+
                     <!-- Overlay Morya Motor Symbol -->
-                    <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
-                        <img src="https://encrypted-tbn2.gstatic.com/faviconV2?url=https://moryamotordrivingschoolparbhani.in&client=VFE&size=64&type=FAVICON&fallback_opts=TYPE,SIZE,URL&nfrp=2" alt="Morya Motor Logo" style="display:block; margin: 0 auto 5px;">
+                    <div
+                        style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
+                        <img src="https://encrypted-tbn2.gstatic.com/faviconV2?url=https://moryamotordrivingschoolparbhani.in&client=VFE&size=64&type=FAVICON&fallback_opts=TYPE,SIZE,URL&nfrp=2"
+                            alt="Morya Motor Logo" style="display:block; margin: 0 auto 5px;">
                         <span style="font-weight: bold; font-size: 14px; color: #333;">Morya Motor</span>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <h6 class="text-primary text-uppercase mb-2">संपर्क करा | Contact Us</h6>
                     <h1 class="display-6 mb-4">
                         अधिक माहितीसाठी<br>
                         For More Information
                     </h1>
-                    
+
                     <p class="mb-2">
                         Near RR Petrol Pump, Basmat Road, Ramkrishna Nagar-431401
                     </p>
-                    
+
                     <p class="mb-4">
                         आमच्याशी थेट WhatsApp वर संपर्क साधण्यासाठी खालील फॉर्म भरा 👇<br>
                         Fill the form below to send your query directly on WhatsApp 📲
                     </p>
-                
+
                     <form id="whatsappForm">
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -186,8 +183,9 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control border-0 bg-light" placeholder="आपला संदेश लिहा / Your Message"
-                                        id="message" style="height: 150px" required></textarea>
+                                    <textarea class="form-control border-0 bg-light"
+                                        placeholder="आपला संदेश लिहा / Your Message" id="message" style="height: 150px"
+                                        required></textarea>
                                     <label for="message">संदेश / Message</label>
                                 </div>
                             </div>
@@ -199,28 +197,28 @@
                         </div>
                     </form>
                 </div>
-                
-                
+
+
                 <!-- WhatsApp Send Script -->
                 <script>
-                document.getElementById("whatsappForm").addEventListener("submit", function(e){
-                    e.preventDefault();
-                    
-                    var name = document.getElementById("name").value;
-                    var email = document.getElementById("email").value;
-                    var subject = document.getElementById("subject").value;
-                    var message = document.getElementById("message").value;
-                    
-                    var whatsappMessage = `*Morya Motor Driving School, Parbhani*%0A%0A👤 Name: ${name}%0A📧 Email: ${email}%0A📝 Subject: ${subject}%0A💬 Message: ${message}`;
-                    
-                    // Add your WhatsApp number below (with country code, no + sign)
-                    var phoneNumber = "917385839375"; // 91 + mobile number
-                    
-                    var whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-                    window.open(whatsappURL, "_blank");
-                });
+                    document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+                        e.preventDefault();
+
+                        var name = document.getElementById("name").value;
+                        var email = document.getElementById("email").value;
+                        var subject = document.getElementById("subject").value;
+                        var message = document.getElementById("message").value;
+
+                        var whatsappMessage = `*Morya Motor Driving School, Parbhani*%0A%0A👤 Name: ${name}%0A📧 Email: ${email}%0A📝 Subject: ${subject}%0A💬 Message: ${message}`;
+
+                        // Add your WhatsApp number below (with country code, no + sign)
+                        var phoneNumber = "917385839375"; // 91 + mobile number
+
+                        var whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+                        window.open(whatsappURL, "_blank");
+                    });
                 </script>
-                
+
             </div>
         </div>
     </div>
@@ -240,7 +238,7 @@
                         <i class="fa fa-map-marker-alt me-3"></i>
                         स्टोअर नंबर 3, RR पेट्रोल पंप जवळ, भालेराव कॉम्प्लेक्स, रामकृष्ण नगर, बसमत रोड - 431401<br>
                         <!-- <span class="text-light">Shop Number 3, Near RR Petrol Pump, Bhalerao Complex, Ramkrishna Nagar, Basmat Road - 431401</span> -->
-                    </p>                    
+                    </p>
                     <p class="mb-2">
                         <i class="fa fa-phone-alt me-3"></i>
                         +91 7385839375
@@ -249,22 +247,22 @@
                         <i class="fa fa-envelope me-3"></i>
                         dipakchavhan007@gmail.com
                     </p>
-                </div>                
+                </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <a class="btn btn-link" href="/about.html">About Us</a>
+                    <a class="btn btn-link" href="/contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="/courses.html">Our Services</a>
+                    <a class="btn btn-link" href="/404.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="/404.html">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Popular Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <a class="btn btn-link" href="/about.html">About Us</a>
+                    <a class="btn btn-link" href="/contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="/appointment.html">Our Services</a>
+                    <a class="btn btn-link" href="/courses.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="/feature.html">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
@@ -293,19 +291,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a href="#">मोरया मोटार ड्रायव्हिंग स्कूल, परभणी</a> | Morya Motor Driving School, Parbhani.<br>
+                    &copy; <a href="#">मोरया मोटार ड्रायव्हिंग स्कूल, परभणी</a> | Morya Motor Driving School,
+                    Parbhani.<br>
                     सर्व हक्क राखीव | All Rights Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    Designed & Developed By 
-                    <a href="#">Shaikh Sohel</a> 
+                    Designed & Developed By
+                    <a href="#">Shaikh Sohel</a>
                     <br>
                     Distributed By: <a href="#" target="_blank">Shaikh Sohel</a>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Copyright End -->
 
 
